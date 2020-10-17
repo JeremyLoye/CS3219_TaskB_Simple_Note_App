@@ -4,7 +4,7 @@
   "description": " ExpressJS backend server for simple note taking app",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "mocha --timeout 12000 ./tests/*.spec.js --delay --exit",
     "format": "prettier --write \"**/*.js\""
   },
