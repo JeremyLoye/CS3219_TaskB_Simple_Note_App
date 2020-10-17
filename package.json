@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "test": "mocha --timeout 12000 ./tests/*.spec.js --delay --exit",
-    "format": "prettier --write \"**/*.js\"",
-    "dev": "concurrently \"npm run start\" \"cd.. && cd FrontEnd && npm run start\""
+    "format": "prettier --write \"**/*.js\""
   },
   "keywords": [
     "backend",
