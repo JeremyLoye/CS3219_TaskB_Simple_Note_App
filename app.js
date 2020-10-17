@@ -26,6 +26,12 @@ const connect = mongoose
   .catch((err) => console.log(err));
 
 const app = express();
+
+var corsOptions = {
+  origin: 'http://localhost:3000',
+  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept'
+};
+app.use(cors(corsOptions));
 app.use(morgan("combined"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
