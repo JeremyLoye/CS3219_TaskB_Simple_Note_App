@@ -6,6 +6,8 @@ deploy:
   provider: gae
   keyfile: cs3219-291409-fbc8c624fc11.json
   project: cs3219-291409
+  on:
+    branch: main
 before_install:
 - openssl aes-256-cbc -K $encrypted_02b1d947195d_key -iv $encrypted_02b1d947195d_iv
   -in cs3219-291409-fbc8c624fc11.json.enc -out cs3219-291409-fbc8c624fc11.json -d

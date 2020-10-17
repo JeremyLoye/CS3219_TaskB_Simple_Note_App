@@ -9,9 +9,9 @@ const noteRouter = require("./routes/note");
 require('dotenv').config();
 
 // Link to connect with MongoDB
-const mongoLink = process.env.MONGO_URL || 'mongodb://localhost:27017/cluster0';
+const mongoLink = 'mongodb+srv://root:root@cluster0.s3jnd.mongodb.net/cluster0?retryWrites=true&w=majority';
 // Port the backend runs on
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 //Connect MongoDB
 const connect = mongoose
