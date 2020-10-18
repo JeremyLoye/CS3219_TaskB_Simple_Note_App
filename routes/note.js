@@ -25,9 +25,10 @@ router.put("/update", (req, res) => {
 });
 
 /* DELETE home page. */
-router.delete("/delete", (req, res) => {
-  Note.findOneAndDelete({ _id: req.body.noteId })
-    .then(() => res.status(200).json({ success: true }))
+router.delete("/delete/:id", (req, res) => {
+  Note.findOneAndDelete({ _id: req.params.id })
+    .then(deletedDoc => 
+      res.status(200).json({ success: (deletedDoc ? true : false) }))
     .catch((err) => res.json({ success: false, err }));
 });
 
