@@ -96,10 +96,7 @@ describe("Note", () => {
     it("should delete the specified note", (done) => {
       chai
         .request(app)
-        .delete("/note/delete")
-        .send({
-          "noteId": noteId
-        })
+        .delete(`/note/delete/${noteId}`)
         .end((err, res) => {
           res.should.have.status(200);
           expect(res.body.success).to.equal(true);
