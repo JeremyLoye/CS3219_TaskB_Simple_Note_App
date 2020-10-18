@@ -1,4 +1,5 @@
 const createError = require("http-errors");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const express = require("express");
 const morgan = require("morgan");
